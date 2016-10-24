@@ -1,54 +1,86 @@
 <!DOCTYPE html>
-<html lang="de">
-  <head>
-    <meta charset="utf-8">
-    <link href="./reveal.css" rel="stylesheet" />
-    <link href="./theme/white.css" rel="stylesheet" />
-    <title>Präsentation mit reveal.js</title>
-    
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Authentifizierung mit passport.js</title>
+
+    <link rel="stylesheet" href="node_modules/reveal/index.css">
+    <link rel="stylesheet" href="node_modules/reveal/theme/blood.css">
+
     <style>
-      * {font-size: 30px;}
-      a, a:hover, a:visited {color: red;}
-      ul {list-style: none;}
-    
+        button {
+            width: 20rem;
+            height: 5rem;
+            font-size: 100%;
+        }
+        
+        pre {
+            font-size: 100%;
+            color: white;
+        }
     </style>
-    
-  </head>
-  <body>
-    
-     <div class="reveal">
-            <div class="slides">
-                <section>
-                  <h1>Sophie du schaffst das!</h1>
-                  <ul>
-                    <li><a href="https://blog.risingstack.com/node-hero-tutorial-getting-started-with-node-js/">Node.js Lesen</a></li>
-                    <li><a href="https://blog.risingstack.com/node-hero-node-js-authentication-passport-js/">Passport.js Lesen</a></li>
-                    <li><a href="http://jasonwatmore.com/post/2016/06/22/nodejs-setup-simple-http-server-local-web-server">Webserver installieren</a></li>
-                  
-                  </ul>
-              
-              </section>
-                <section data-background-video="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" data-background-video-muted>
-                        <h1>Waffeln</h1>
-                  <ul>
-                    <li><a href="https://oauth.net/">OAuth Lesen</a></li>
-                    <li><a href="https://blog.risingstack.com/node-hero-node-js-authentication-passport-js/">Passport.js Lesen</a></li>
-                    <li><a href="http://jasonwatmore.com/post/2016/06/22/nodejs-setup-simple-http-server-local-web-server">Webserver installieren</a></li>
-                  
-                    
-                  </ul>
-              
-              
-              </section>
-            </div>
-     </div>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h2>Authentifizierung mit passport.js</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit nostrum inventore odio optio quidem iusto maiores minima laboriosam impedit aperiam odit veniam facere ea, similique ad quos distinctio, ipsam tenetur?</p>
+            </section>
+            <section>
+                <h2>Was?</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea praesentium tenetur suscipit, laboriosam enim illum voluptatem expedita, ut perspiciatis. Accusantium laboriosam labore veniam voluptates nihil blanditiis animi, omnis rerum consequuntur.</p>
+            </section>
+            <section>
+                <h2>Warum?</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur cum hic consectetur, sapiente porro! Voluptatum fugit voluptas quisquam nostrum, laborum eum odio repellendus ipsa inventore dolor minima incidunt voluptatem tenetur.</p>
+            </section>
+            <section>
+                <h2>Wie?</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione omnis maiores commodi possimus numquam ea excepturi, exercitationem eveniet nisi fugiat iste optio, odit similique, sunt non. Quod officiis distinctio, itaque.</p>
+            </section>
+            <section>
+                <h2>Demo</h2>
+                <button onclick="git()">GitHub</button>
+                <button onclick="logout()">Logout</button>
+                <pre></pre>
+            </section>
+        </div>
+    </div>
 
 
-
-
-    <script src="./reveal.js"></script>
+    <script src="node_modules/reveal/index.js"></script>
     <script>
-      Reveal.initialize();
+        Reveal.initialize({
+            ontrols: true,
+            progress: true,
+            history: true,
+            center: false
+        });
     </script>
-  </body>
+    
+    <script>
+       var git = function(){
+           alert('Test');
+       };
+    
+       var logout = function(){
+           httpGet('/logout');
+       }
+       
+       
+       
+       function httpGet(url){
+           var xmlHttp = new XMLHttpRequest();
+           xmlHttp.open("GET", url, false);
+           xmlHttp.send(null);
+           return xmlHttp.responseText;
+       }
+    
+    </script>
+
+</body>
+
 </html>
