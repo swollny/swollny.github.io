@@ -6,6 +6,6 @@ by Sophie Wollny
 Download here: https://github.com/swollny/Authentication-with-Passport
 
 
-### Backup GIF if not loaded
-![Demo]()
+#### Warning: Backup GIF is not loading
+
 
